@@ -15,6 +15,11 @@ function continueGame(){
 
     const currentAlphabetElement = document.getElementById('current-alphabet');
     currentAlphabetElement.innerText = alphabet;
+
+
+    // set background color 
+    setBackgroundColorById(alphabet);
+
 }
 
 
@@ -33,3 +38,10 @@ function getARandomAlphabet(){
     
 }
 
+
+
+function setBackgroundColorById(elementId){
+    const element = document.getElementById(elementId);
+    element.classList.add('bg-orange-400');
+    element.classList.add('text-white');
+}
