@@ -17,13 +17,13 @@
 </head>
 
 <body class="bg-[#010313] min-h-screen bg-[url(./images/background.png)] bg-no-repeat bg-center">
-    <main class="">
+    <main >
         <!-- Home Screen -->
         <section id="home" class="home">
             <div class="flex flex-col gap-5 justify-center items-center h-screen">
                 <h3 class="text-8xl font-anton text-white">ALPHABET CLASH</h3>
                 <p class="font-poppins text-white text-xl">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-                <button id="play-now" class="btn btn-outline px-5 mt-5">Play Now</button>
+                <button onclick="play()" id="play-now" class="btn btn-outline px-5 mt-5">Play Now</button>
             </div>
         </section>
         <!-- PlayGround Start -->
@@ -81,23 +81,23 @@
                     <button class="btn text-lg rounded-3xl px-5 bg-[#894189]">
                         Life
                         <img src="./images/heart.svg" alt="">
-                        1
+                        <span id="life">5</span>
                     </button>
 
                     <button class="btn text-lg rounded-3xl px-5 bg-[#360490]">
                         Score
                         <img src="./images/score.svg" alt="">
-                        1
+                        <span id="score">0</span>
                     </button>
                 </div>
             </div>
         </section>
         <!-- PlayGround End -->
         <!-- Final Score Start -->
-        <section class=" score flex justify-center items-center h-screen font-poppins hidden">
+        <section id="final-score" class=" score flex justify-center items-center h-screen font-poppins hidden">
             <div class=" space-y-6 flex flex-col items-center justify-center border p-12 rounded-2xl bg-gradient-to-l from-violet-800 to-violet-700">
-                <h3 class="text-6xl text-white"><span class="font-extrabold">Score :</span> <span>14</span></h3>
-                <button class="btn btn-outline px-5 text-white text-2xl hover:bg-white">Play Again</button>
+                <h3 class="text-6xl text-white"><span class="font-extrabold">Score :</span> <span id="final-score-show">0</span></h3>
+                <button onclick="play()" class="btn btn-outline px-5 text-white text-2xl hover:bg-white">Play Again</button>
                 <p class="font-medium text-xl text-white">Practice will make you Pro</p>
             </div>
         </section>
